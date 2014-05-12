@@ -1,0 +1,35 @@
+
+<div class="row">
+ <div class="col-xs-1"></div> 
+ <div class="col-xs-10">
+    <div class="alert alert-info">
+       <h1>Instructions</h1>
+       <h4>Click on 'Primary Widgets', 'Success Widgets' to show widgets.</h4>
+       <h4>Drag widget onto the widget container.</h4>
+       <h4>Click a widget in container to view widget details dialog. Enter data
+       for widget then press 'OK' update, or 'Delete' to remove widget.<h4>
+       <h4>Press "Save" to save all changes.</h4>
+     </div>       
+  </div>
+  <div class="col-xs-1"></div>
+</div> 
+<div class="row">
+  <div class="col-xs-2" style="text-align:center;">
+    <div style="margin-left:4%">
+      <button class="btn btn-primary" ng-click="saveContainerWidgets()">Save</button><br><br> 
+      <accordion close-others="oneAtATime">
+        <accordion-group heading="Primary Widgets">
+          <droppable-widget ng-repeat="widget in primaryWidgets" icon="{{widget.icon}}" type="{{widget.type}}" widget="{{widget}}"/>
+        </accordion-group>
+        <accordion-group heading="Success Widgets">
+          <droppable-widget ng-repeat="widget in successWidgets" icon="{{widget.icon}}" type="{{widget.type}}" widget="{{widget}}"/>
+        </accordion-group>
+      </accordion>
+    </div> 
+  </div>
+  <div class="col-xs-10">
+     <div id="droppable_container" class="panel panel-default" style="height:100vh" droppable>
+        <div container-widget ng-repeat="widget in containerWidgets" widget="{{widget}}" ng-click="open($event)"/>
+     </div>
+  </div>
+</div>

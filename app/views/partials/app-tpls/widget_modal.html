@@ -1,0 +1,24 @@
+<div class="modal-header">
+    <h3 class="modal-title">Widget Details</h3>
+</div>
+<div class="modal-body">
+    <form role="form">
+       <div class="form-group">
+          <label for="name">Icon:</label>
+          {{selectedWidgetDetails.icon}}
+       </div>
+       <div class="form-group">
+          <label for="name">Type:</label>
+          {{selectedWidgetDetails.type}}
+       </div> 
+        <div class="form-group">
+          <label for="name">Data</label>
+          <input type="text" class="form-control" ng-model="selectedWidgetDetails.data">
+       </div>   
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-danger" ng-click="delete()">Delete</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>

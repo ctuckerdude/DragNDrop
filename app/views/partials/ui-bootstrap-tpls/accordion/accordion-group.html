@@ -1,0 +1,8 @@
+<div class="panel panel-default">
+  <div class="panel-heading" ng-click="toggleOpen()" accordion-transclude="heading" style="cursor:pointer">
+     {{heading}}
+  </div>
+  <div class="panel-collapse" collapse="!isOpen">
+      <div class="panel-body" ng-transclude></div>
+  </div>
+</div>	
