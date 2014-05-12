@@ -4,6 +4,7 @@ Drag 'N' Drop
 If you intend to use "Drag 'N' Drop" in a public accessible network e.g. internet, you will need to implement security provisions, which should include login functionality.
 
 Instructions
+------------
 
 1. Install using Git or download zip file.
 2. Install node modules: npm install
